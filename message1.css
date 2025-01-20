@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url(Imgs/background2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.container {
+    max-width: 1200px;
+    height: 700px;
+    margin: 20px auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 120px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.image img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 6px;
+    display: block;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+}
+
+.text {
+    flex: 1;
+    padding-left: 15px;
+}
+
+h1 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #333;
+    transition: color 0.8s ease, text-shadow 0.8s ease;
+    cursor: pointer;
+} 
+
+h1:hover {
+    color: #0056b3;
+    /* Brighter blue on hover */
+    text-shadow: 0 0 10px rgba(1, 122, 236, 0.76);
+    /* Glow effect */
+}
+
+.ico {
+    display: flex;
+    position: relative;
+    width: 100px;
+    height: 70px;
+    top: 80px;
+}
+
+.details {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.details span {
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 35px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+}
+
+.n1 a {
+    position: relative;
+    font-size: 22px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 35px;
+    cursor: pointer;
+    transition: 0.5s;
+    bottom: 11px;
+}
+.n1 a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: 0.5s
+}
+
+.n1 a:hover::before {
+    width: 100%;
+}
+
+.n1 a:hover {
+    color: rgb(0, 255, 149);
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style-type: none;
+    bottom: 15px;
+}
+
+.active1 {
+    color: white;
+}
+
+.active1::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.menu-icon i {
+    color: #fff;
+    font-size: 30px;
+}
+
+@media (max-width:600px) {
+    nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+        gap: 0;
+        overflow: hidden;
+    }
+
+    nav ul li {
+        padding: 20px;
+        padding-top: 13px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menuList {
+        transition: all 0.5s;
+    }
+}
+
+@media (max-width: 900px) {
+    nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+        gap: 0;
+        overflow: hidden;
+    }
+
+    nav ul li {
+        padding: 20px;
+        padding-top: 13px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menuList {
+        transition: all 0.5s;
+    }
+
+}
+
+.b1{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.hr5{
+    width: 400px;
+    border: none;
+    border-radius: 10px;
+    height: 5px;
+    background-color: black;
+    position: relative;
+    left: 376px;
+}
+
+.socbtn {
+    margin: 10px;
+    padding: 13px 20px;
+    border: none;
+    outline: none;
+    color: #FFF;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+    bottom: 30px;
+    right: 20px;
+    font-size: 15px;
+}
+
+.socbtn::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+/* glow */
+.socbtn::before {
+    content: "";
+    background: linear-gradient(45deg,
+            #FF0000, #FF7300, #FFFB00, #48FF00,
+            #00FFD5, #002BFF, #FF00C8, #FF0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+/* hover */
+.socbtn:hover::before {
+    opacity: 1;
+}
+
+.socbtn:active:after {
+    background: transparent;
+}
+
+.socbtn:active {
+    color: #000;
+    font-weight: bold;
+}
+
+.btns{
+    position: relative;
+    top: 50px;
+    left: 250px;
+}
+
+.fa-facebook{
+    position: relative;
+    top: 2px;
+    font-size: 20px;
+}
+
+.fa-whatsapp{
+    position: relative;
+    top: 2px;
+    font-size: 20px;
+}
